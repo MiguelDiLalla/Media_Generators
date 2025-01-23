@@ -1,1 +1,3 @@
-manim_docs/
+# Ignore files
+*.pyc
+__pycache__/

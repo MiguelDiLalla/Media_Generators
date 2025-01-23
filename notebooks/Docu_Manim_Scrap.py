@@ -28,27 +28,34 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # File to track downloaded links
 PROGRESS_FILE = os.path.join(OUTPUT_DIR, "progress.json")
 
+# Maximum depth for scraping
+MAX_DEPTH = 2
+
 # Load or initialize progress tracking
 def load_progress():
     if os.path.exists(PROGRESS_FILE):
         with open(PROGRESS_FILE, "r") as file:
             return json.load(file)
-    return {"downloaded": []}
+    return {"downloaded": [], "visited": []}
 
 def save_progress(progress):
     with open(PROGRESS_FILE, "w") as file:
         json.dump(progress, file)
 
-def get_links(base_url):
+def get_links(base_url, current_depth):
     """
-    Collects all unique links from the main reference page.
+    Collects all unique links from the given page up to a specified depth.
 
     Args:
         base_url (str): The base URL of the documentation.
+        current_depth (int): Current depth of scraping.
 
     Returns:
         list: A list of unique absolute URLs found on the page.
     """
+    if current_depth > MAX_DEPTH:
+        return []
+
     response = requests.get(base_url)
     if response.status_code != 200:
         raise Exception(f"Failed to fetch {base_url}: {response.status_code}")
@@ -124,7 +131,7 @@ def html_to_pdf(html_files, output_pdf):
     pdf_pages = []
     for html_file in tqdm(html_files, desc="Rendering HTML to PDF"):
         try:
-            pdf_pages.append(HTML(html_file, base_url=BASE_URL).render())
+            pdf_pages.append(HTML(html_file).render())
         except Exception as e:
             print(f"Error rendering {html_file}: {e}")
     if pdf_pages:
@@ -143,27 +150,40 @@ def main():
     try:
         # Step 1: Collect all relevant links
         print("Collecting links from the documentation...")
-        links = get_links(BASE_URL)
-        print(f"Found {len(links)} links.")
-
-        # Step 2: Load progress
         progress = load_progress()
+        if "visited" not in progress:
+            progress["visited"] = []
 
-        # Step 3: Download all pages with a progress bar
+        links_to_visit = [BASE_URL]
+        all_links = set()
+
+        for depth in range(1, MAX_DEPTH + 1):
+            new_links = []
+            for link in links_to_visit:
+                if link not in progress["visited"]:
+                    progress["visited"].append(link)
+                    save_progress(progress)
+                    new_links.extend(get_links(link, depth))
+            all_links.update(new_links)
+            links_to_visit = new_links
+
+        print(f"Found {len(all_links)} links within depth {MAX_DEPTH}.")
+
+        # Step 2: Download all pages with a progress bar
         print("Downloading pages...")
         html_files = []
-        for link in tqdm(links, desc="Downloading HTML pages"):
+        for link in tqdm(all_links, desc="Downloading HTML pages"):
             file_path = download_page(link, OUTPUT_DIR, progress)
             if file_path:
                 html_files.append(file_path)
             time.sleep(0.5)  # Adjusted limit
 
-        # Step 4: Convert HTML files to a single PDF
+        # Step 3: Convert HTML files to a single PDF
         print("Generating PDF...")
         pdf_path = os.path.join(OUTPUT_DIR, "manim_docs_complete.pdf")
         html_to_pdf([os.path.join(OUTPUT_DIR, f) for f in os.listdir(OUTPUT_DIR) if f.endswith('.html')], pdf_path)
 
-        # Step 5: Handle output for Colab
+        # Step 4: Handle output for Colab
         if COLAB_ENV:
             from google.colab import files
             print("Downloading PDF to local machine...")

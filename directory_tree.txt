@@ -1,0 +1,108 @@
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── ORIG_HEAD
+│   ├── config
+│   ├── description
+│   ├── fsmonitor--daemon
+│   │   └── cookies
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               └── main
+│   ├── objects
+│   │   ├── 10
+│   │   │   └── 33330c1a2fecce70f5676dcd076f81fdd33e17
+│   │   ├── 27
+│   │   │   └── 243afd218b56595def9679922951f0c4edae4f
+│   │   ├── 2c
+│   │   │   └── 718cd33a761481ef5ded299d3395d31a0cb03e
+│   │   ├── 56
+│   │   │   └── 962be574ebdf23d2324a4a757b2afeb96b8397
+│   │   ├── 6d
+│   │   │   └── 0e4ec7ca021972517e47b371e3ae41dcb6604a
+│   │   ├── 92
+│   │   │   └── 831e6ccdaf0ea21ec0c0b0d29c6cbfdde13349
+│   │   ├── af
+│   │   │   └── 9e2673d401417b11a9c1c6066baa189ead4c6f
+│   │   ├── b5
+│   │   │   └── 61a6863d1f64de874a679b6227c533f3cf85c6
+│   │   ├── f0
+│   │   │   └── ce21a4d474e45b655ac32165c5efd7cd70215a
+│   │   ├── info
+│   │   └── pack
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       │       └── main
+│       └── tags
+├── .gitignore
+├── assets
+│   ├── audio
+│   ├── images
+│   └── videos
+├── config.py
+├── docs
+│   ├── README.md
+│   ├── ROADMAP.md
+│   ├── SETUP.md
+│   └── USAGE.md
+├── exports
+│   ├── horizontal
+│   ├── reels
+│   └── shorts
+├── notebooks
+│   ├── Create_Project_Estructure.py
+│   ├── Docu_Manim_Scrap.py
+│   ├── Project_Utilities.ipynb
+│   ├── README.md
+│   └── directory_tree.txt
+├── presets
+│   ├── color_schemes.py
+│   ├── effects.py
+│   ├── transitions.py
+│   └── typography.py
+├── requirements.txt
+├── run.py
+├── scenes
+│   ├── educational
+│   ├── examples
+│   ├── storytelling
+│   └── transitions
+├── scripts
+│   ├── audio_sync.py
+│   ├── batch_render.py
+│   ├── util.py
+│   └── video_export.py
+├── templates
+│   ├── audio_scene.py
+│   └── base_scene.py
+└── tests
+    ├── test_presets.py
+    ├── test_scenes.py
+    └── test_utils.py
