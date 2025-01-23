@@ -1,0 +1,89 @@
+├── .gitignore
+├── Colab_WebScrap_Docu.ipynb
+├── Create_Project_Estructure.py
+├── Docu_Manim_Scrap.py
+├── Project_Utilities.ipynb
+├── README.md
+├── assets # Media files for animations (audio, images, videos)
+│   ├── audio
+│   ├── images
+│   └── videos
+├── config.py
+├── docs # Documentation of the project
+│   ├── README.md
+│   ├── ROADMAP.md
+│   ├── SETUP.md
+│   └── USAGE.md
+├── exports # Exported videos (reels, shorts, horizontal)
+│   ├── horizontal
+│   ├── reels
+│   └── shorts
+├── manim_project
+│   ├── .gitignore
+│   ├── assets # Media files for animations (audio, images, videos)
+│   │   ├── audio
+│   │   ├── images
+│   │   └── videos
+│   ├── config.py
+│   ├── directory_tree.txt
+│   ├── docs # Documentation of the project
+│   │   ├── README.md
+│   │   ├── ROADMAP.md
+│   │   ├── SETUP.md
+│   │   └── USAGE.md
+│   ├── exports # Exported videos (reels, shorts, horizontal)
+│   │   ├── horizontal
+│   │   ├── reels
+│   │   └── shorts
+│   ├── notebooks # Notebooks for development and exploration
+│   │   └── README.md
+│   ├── presets # Reusable visual effects and style configurations
+│   │   ├── color_schemes.py
+│   │   ├── effects.py
+│   │   ├── transitions.py
+│   │   └── typography.py
+│   ├── requirements.txt
+│   ├── run.py
+│   ├── scenes # Manim scenes (examples, storytelling, etc.)
+│   │   ├── educational
+│   │   ├── examples
+│   │   ├── storytelling
+│   │   └── transitions
+│   ├── scripts # Automation tools and utility functions
+│   │   ├── audio_sync.py
+│   │   ├── batch_render.py
+│   │   ├── util.py
+│   │   └── video_export.py
+│   ├── templates # Base classes and reusable components for scenes
+│   │   ├── audio_scene.py
+│   │   └── base_scene.py
+│   └── tests # Unit tests for ensuring stability
+│       ├── test_presets.py
+│       ├── test_scenes.py
+│       └── test_utils.py
+├── notebooks # Notebooks for development and exploration
+│   └── README.md
+├── presets # Reusable visual effects and style configurations
+│   ├── color_schemes.py
+│   ├── effects.py
+│   ├── transitions.py
+│   └── typography.py
+├── requirements.txt
+├── run.py
+├── scenes # Manim scenes (examples, storytelling, etc.)
+│   ├── educational
+│   ├── examples
+│   ├── storytelling
+│   └── transitions
+├── scripts # Automation tools and utility functions
+│   ├── audio_sync.py
+│   ├── batch_render.py
+│   ├── util.py
+│   └── video_export.py
+├── templates # Base classes and reusable components for scenes
+│   ├── audio_scene.py
+│   └── base_scene.py
+└── tests # Unit tests for ensuring stability
+    ├── test_presets.py
+    ├── test_scenes.py
+    └── test_utils.py

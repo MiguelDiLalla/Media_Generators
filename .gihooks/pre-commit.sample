@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Step 1: Print a message indicating the hook is running
+echo "Running pre-commit hook: updating directory_tree.txt..."
+
+# Step 2: Run the script to update the directory tree
+python3 scripts/update_directory_tree.py
+
+# Step 3: Add the updated directory_tree.txt to the commit
+git add notebooks/directory_tree.txt
+
+# Step 4: Print confirmation
+echo "directory_tree.txt has been updated and staged for commit."

@@ -36,22 +36,81 @@
 │   ├── objects
 │   │   ├── 10
 │   │   │   └── 33330c1a2fecce70f5676dcd076f81fdd33e17
+│   │   ├── 14
+│   │   │   └── f54de0b57cab2038f2eadd9843c0bca2fae5ad
+│   │   ├── 15
+│   │   │   └── 95e5a9f3ee9efcb8d07da830bb25591edb02a9
+│   │   ├── 22
+│   │   │   └── a415e2898b26c47c0431ef1bf11ce7237ac2c4
 │   │   ├── 27
 │   │   │   └── 243afd218b56595def9679922951f0c4edae4f
 │   │   ├── 2c
 │   │   │   └── 718cd33a761481ef5ded299d3395d31a0cb03e
+│   │   ├── 36
+│   │   │   └── cd357dc094106f37d4219a0ee915fe5a2eeba5
+│   │   ├── 3d
+│   │   │   └── aa3eec2ae83e00fc68b914d38076c11c93a0cf
+│   │   ├── 44
+│   │   │   └── db6bcfad2a5ce97c3ceb401f8de87de6502542
 │   │   ├── 56
 │   │   │   └── 962be574ebdf23d2324a4a757b2afeb96b8397
+│   │   ├── 69
+│   │   │   └── e3d735e6d8fde67ee883220e082b3bc78057ad
 │   │   ├── 6d
 │   │   │   └── 0e4ec7ca021972517e47b371e3ae41dcb6604a
+│   │   ├── 6e
+│   │   │   └── 657fabaacf9dcf34954fb6bfca2edc8ba87ec5
+│   │   ├── 6f
+│   │   │   └── 9cb145fdef905bdbb5d08b19d41054b48172bc
+│   │   ├── 7e
+│   │   │   └── 59600739c96546163833214c36459e324bad0a
+│   │   ├── 80
+│   │   │   └── a9e839b5f5b56d35c887bb46669fbf5089778e
+│   │   ├── 81
+│   │   │   └── e130b916181e46704b6bdaabf11d3f009cfd5c
+│   │   ├── 8f
+│   │   │   └── 1a8f312db5070f227705290d034f037c5352ff
 │   │   ├── 92
-│   │   │   └── 831e6ccdaf0ea21ec0c0b0d29c6cbfdde13349
+│   │   │   ├── 831e6ccdaf0ea21ec0c0b0d29c6cbfdde13349
+│   │   │   └── a06ed5432354247a188acab8fcfc67f8b66422
+│   │   ├── 96
+│   │   │   └── 2b125f3f3effca50e824f909ebf7561ca04123
+│   │   ├── 9f
+│   │   │   └── a85e5ca554eeb6965390de305de582f5b2915f
+│   │   ├── a7
+│   │   │   └── c7f59954a6e46697df5f3770050719e48b79d0
 │   │   ├── af
 │   │   │   └── 9e2673d401417b11a9c1c6066baa189ead4c6f
+│   │   ├── b0
+│   │   │   └── 1f66c1e884cf44dc3c070d9dbd46793df629a6
+│   │   ├── b1
+│   │   │   └── fc3f1afd7ee4de1b4a34ef2fac147ec2b47920
 │   │   ├── b5
 │   │   │   └── 61a6863d1f64de874a679b6227c533f3cf85c6
+│   │   ├── bd
+│   │   │   └── 1e0b1bdab9ea67602cdcda581d6d2e60f8a67d
+│   │   ├── bf
+│   │   │   └── b08711cda81c206840e117af397dddb2b5c6a6
+│   │   ├── ce
+│   │   │   └── 10f094787b69e9d8eaf2af9c9b2caceb4b834f
+│   │   ├── d3
+│   │   │   └── 3eb0dc82b94f050b7d719f3d6b51bf2b35cfde
+│   │   ├── de
+│   │   │   └── 97adaa10437eba422a98d09ae90e18a4e71172
+│   │   ├── e3
+│   │   │   └── d481330fad2bb9815375321fa78069263b21c3
 │   │   ├── f0
 │   │   │   └── ce21a4d474e45b655ac32165c5efd7cd70215a
+│   │   ├── f2
+│   │   │   └── 53e470284d371b1a7620a9fbfb624b6bcc58a4
+│   │   ├── f3
+│   │   │   └── 182cd47da76d76d44a3bb6584962fe76b3d987
+│   │   ├── f4
+│   │   │   └── 680d5b41b75054005d397a3ec11e076e803a71
+│   │   ├── fa
+│   │   │   └── cf25bc6af421c995ab50f1464d21190472d59b
+│   │   ├── fd
+│   │   │   └── 6ef8f7975356e57a4df1ffff31324304c2143b
 │   │   ├── info
 │   │   └── pack
 │   └── refs
@@ -62,47 +121,49 @@
 │       │       └── main
 │       └── tags
 ├── .gitignore
-├── assets
+├── assets # Media files for animations (audio, images, videos)
 │   ├── audio
 │   ├── images
 │   └── videos
 ├── config.py
-├── docs
+├── directory_tree.txt
+├── docs # Documentation of the project
 │   ├── README.md
 │   ├── ROADMAP.md
 │   ├── SETUP.md
 │   └── USAGE.md
-├── exports
+├── exports # Exported videos (reels, shorts, horizontal)
 │   ├── horizontal
 │   ├── reels
 │   └── shorts
-├── notebooks
+├── notebooks # Notebooks for development and exploration
+│   ├── Colab_WebScrap_Docu.ipynb
 │   ├── Create_Project_Estructure.py
 │   ├── Docu_Manim_Scrap.py
 │   ├── Project_Utilities.ipynb
 │   ├── README.md
 │   └── directory_tree.txt
-├── presets
+├── presets # Reusable visual effects and style configurations
 │   ├── color_schemes.py
 │   ├── effects.py
 │   ├── transitions.py
 │   └── typography.py
 ├── requirements.txt
 ├── run.py
-├── scenes
+├── scenes # Manim scenes (examples, storytelling, etc.)
 │   ├── educational
 │   ├── examples
 │   ├── storytelling
 │   └── transitions
-├── scripts
+├── scripts # Automation tools and utility functions
 │   ├── audio_sync.py
 │   ├── batch_render.py
 │   ├── util.py
 │   └── video_export.py
-├── templates
+├── templates # Base classes and reusable components for scenes
 │   ├── audio_scene.py
 │   └── base_scene.py
-└── tests
+└── tests # Unit tests for ensuring stability
     ├── test_presets.py
     ├── test_scenes.py
     └── test_utils.py
