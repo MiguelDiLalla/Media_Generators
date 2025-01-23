@@ -1,3 +1,9 @@
 # Ignore files
 *.pyc
 __pycache__/
+
+
+notebooks/media/
+scripts/media/
+data/media/
+media/
