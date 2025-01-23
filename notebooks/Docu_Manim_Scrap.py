@@ -21,7 +21,7 @@ BASE_URL = "https://docs.manim.community/en/stable/reference.html"
 if COLAB_ENV:
     OUTPUT_DIR = "/content/manim_docs"
 else:
-    OUTPUT_DIR = os.path.join(os.getcwd(), "manim_docs")
+    OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "manim_docs")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -29,7 +29,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 PROGRESS_FILE = os.path.join(OUTPUT_DIR, "progress.json")
 
 # Maximum depth for scraping
-MAX_DEPTH = 2
+MAX_DEPTH = 1
 
 # Load or initialize progress tracking
 def load_progress():
