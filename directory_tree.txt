@@ -1,3 +1,5 @@
+├── .gihooks
+│   └── pre-commit.sample
 ├── .git
 │   ├── COMMIT_EDITMSG
 │   ├── FETCH_HEAD
@@ -13,7 +15,7 @@
 │   │   ├── fsmonitor-watchman.sample
 │   │   ├── post-update.sample
 │   │   ├── pre-applypatch.sample
-│   │   ├── pre-commit.sample
+│   │   ├── pre-commit
 │   │   ├── pre-merge-commit.sample
 │   │   ├── pre-push.sample
 │   │   ├── pre-rebase.sample
@@ -40,7 +42,10 @@
 │   │   │   └── f54de0b57cab2038f2eadd9843c0bca2fae5ad
 │   │   ├── 15
 │   │   │   └── 95e5a9f3ee9efcb8d07da830bb25591edb02a9
+│   │   ├── 18
+│   │   │   └── e6136dd9eff6afc5cbab26fc5c7eb26eafa001
 │   │   ├── 22
+│   │   │   ├── 4051cfdd436bb9cd52195729c60d7d8895787a
 │   │   │   └── a415e2898b26c47c0431ef1bf11ce7237ac2c4
 │   │   ├── 27
 │   │   │   └── 243afd218b56595def9679922951f0c4edae4f
@@ -51,9 +56,14 @@
 │   │   ├── 3d
 │   │   │   └── aa3eec2ae83e00fc68b914d38076c11c93a0cf
 │   │   ├── 44
+│   │   │   ├── acbf8f1cf1880b0ad40f6c9ad9596e71f48c2e
 │   │   │   └── db6bcfad2a5ce97c3ceb401f8de87de6502542
+│   │   ├── 4b
+│   │   │   └── 4a15b873e1c59ebdc749916b74ece7bc6c1847
 │   │   ├── 56
 │   │   │   └── 962be574ebdf23d2324a4a757b2afeb96b8397
+│   │   ├── 67
+│   │   │   └── 0166a65ca63078870d6b151b98a1ac5dcbdd36
 │   │   ├── 69
 │   │   │   └── e3d735e6d8fde67ee883220e082b3bc78057ad
 │   │   ├── 6d
@@ -62,6 +72,11 @@
 │   │   │   └── 657fabaacf9dcf34954fb6bfca2edc8ba87ec5
 │   │   ├── 6f
 │   │   │   └── 9cb145fdef905bdbb5d08b19d41054b48172bc
+│   │   ├── 72
+│   │   │   └── 090475f91e5e454d9d7972bbd446f4f5c23ca5
+│   │   ├── 7d
+│   │   │   ├── b453d553924d524b55a6e7d1264646a582b2f3
+│   │   │   └── c1d3d6dd828e1b68dcf869b5a1dd21aab0930e
 │   │   ├── 7e
 │   │   │   └── 59600739c96546163833214c36459e324bad0a
 │   │   ├── 80
@@ -73,12 +88,18 @@
 │   │   ├── 92
 │   │   │   ├── 831e6ccdaf0ea21ec0c0b0d29c6cbfdde13349
 │   │   │   └── a06ed5432354247a188acab8fcfc67f8b66422
+│   │   ├── 93
+│   │   │   └── 541c84a92dfdb35ad73ec357d58c25d558eba8
 │   │   ├── 96
 │   │   │   └── 2b125f3f3effca50e824f909ebf7561ca04123
+│   │   ├── 9d
+│   │   │   └── 47525238798e4c060bd6814d839838c174f3b6
 │   │   ├── 9f
 │   │   │   └── a85e5ca554eeb6965390de305de582f5b2915f
 │   │   ├── a7
 │   │   │   └── c7f59954a6e46697df5f3770050719e48b79d0
+│   │   ├── ae
+│   │   │   └── c31bc54c4ed559f57019ad26e629722d036bca
 │   │   ├── af
 │   │   │   └── 9e2673d401417b11a9c1c6066baa189ead4c6f
 │   │   ├── b0
@@ -95,10 +116,16 @@
 │   │   │   └── 10f094787b69e9d8eaf2af9c9b2caceb4b834f
 │   │   ├── d3
 │   │   │   └── 3eb0dc82b94f050b7d719f3d6b51bf2b35cfde
+│   │   ├── d9
+│   │   │   └── 00b29ff4da5c02c425a28af33970d837f10ec4
 │   │   ├── de
 │   │   │   └── 97adaa10437eba422a98d09ae90e18a4e71172
 │   │   ├── e3
 │   │   │   └── d481330fad2bb9815375321fa78069263b21c3
+│   │   ├── e6
+│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   ├── e7
+│   │   │   └── 7c4491430dbefa107a95e5dcc1d9ba583d43ee
 │   │   ├── f0
 │   │   │   └── ce21a4d474e45b655ac32165c5efd7cd70215a
 │   │   ├── f2
@@ -109,6 +136,8 @@
 │   │   │   └── 680d5b41b75054005d397a3ec11e076e803a71
 │   │   ├── fa
 │   │   │   └── cf25bc6af421c995ab50f1464d21190472d59b
+│   │   ├── fc
+│   │   │   └── 5e4a8835e28231e11ad7510666515d28ffaf69
 │   │   ├── fd
 │   │   │   └── 6ef8f7975356e57a4df1ffff31324304c2143b
 │   │   ├── info
@@ -158,6 +187,8 @@
 ├── scripts # Automation tools and utility functions
 │   ├── audio_sync.py
 │   ├── batch_render.py
+│   ├── generate_project_structure.py
+│   ├── update_directory_tree.py
 │   ├── util.py
 │   └── video_export.py
 ├── templates # Base classes and reusable components for scenes
